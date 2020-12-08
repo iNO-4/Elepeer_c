@@ -1,0 +1,51 @@
+<div class="container sign_in_container">
+  <div class="sign_in_title">
+    <p class="sign_in_title_1">Log In</p>
+    <p class="sign_in_title_2">ログイン画面</p>
+  </div>
+
+  <div class="sign_in_box">
+    <div class="sign_in_box_message">
+      <p>ログイン入力フォーム</p>
+    </div>
+    <div class="sign_in_box_1">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <div class="sign_in_field">
+          <%= f.label :メールアドレス %><br>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "sign_in_text" %>
+        </div>
+
+        <div class="sign_in_field">
+          <%= f.label :パスワード %><br>
+          <%= f.password_field :password, autocomplete: "current-password", class: "sign_in_text" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="sign_in_field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+
+        <div class="sign_in_actions">
+          <%= f.submit 'ログイン', class: "btn btn-primary btn-md" %>
+        </div>
+      <% end %>
+
+      <div class="sign_in_line"></div>
+
+      <p>新規登録画面はこちらから>>>
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+        <% end %>
+      </p>
+      <p>パスワードを忘れた場合はこちら>>>
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <!--<%= link_to "Forgot your password?", new_password_path(resource_name) %><br />-->
+          <%= link_to "Forgot your password?", "#" %><br />
+        <% end %>
+      </p>
+    </div>
+  </div>
+</div>

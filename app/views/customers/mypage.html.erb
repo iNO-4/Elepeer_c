@@ -1,0 +1,21 @@
+<div class="container mypage_container">
+	<div class="mypage_title">
+		<p class="mypage_title_1">My Page</p>
+		<p class="mypage_title_2">マイページ</p>
+	</div>
+
+	<div class="mypage_box">
+		<div class="mypage_list">
+			<%= link_to '投稿する', new_post_path, class: 'mypage_item' %>
+		</div>
+		<div class="mypage_list">
+			<%= link_to '自分の投稿', all_posts_path(customer_id: @customer.id), class: 'mypage_item' %>
+		</div>
+		<div class="mypage_list">
+			<%= link_to 'ユーザ情報', customer_path(current_customer), class: 'mypage_item' %>
+		</div>
+		<div class="mypage_list">
+			<%= link_to 'お気に入りリスト', bookmarks_path, class: 'mypage_item' %>
+		</div>
+	</div>
+</div>

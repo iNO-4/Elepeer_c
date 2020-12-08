@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elepeer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="drawer drawer--left">
+    <div id="wrapper">
+      <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="header-container">
+              <div role="banner">
+                <button type="button" class="drawer-toggle drawer-hamburger">
+                  <span class="sr-only">toggle navigation</span>
+                  <span class="drawer-hamburger-icon"></span>
+                </button>
+                  <nav class="drawer-nav" role="navigation">
+                    <ul class="drawer-menu">
+                      <% if customer_signed_in? %>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'TOP', root_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'About', homes_about_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to '投稿一覧', posts_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'ユーザ一覧', customers_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'ランキング', ranking_posts_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'マイページ', mypage_customer_path(current_customer), class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'ログアウト', destroy_customer_session_path, method: :delete, class: 'item' %></li>
+
+                      <% else %>
+
+                        <li class="drawer-menu-item">
+                          <%= link_to 'TOP', root_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'About', homes_about_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to '投稿一覧', posts_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'ユーザ一覧', customers_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'ランキング', ranking_posts_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to '新規登録', new_customer_registration_path, class: 'item' %></li>
+                        <li class="drawer-menu-item">
+                          <%= link_to 'ログイン', new_customer_session_path, class: 'item' %></li>
+
+                      <% end %>
+                    </ul>
+                  </nav>
+            </div>
+            <div class="logo">
+              <%= link_to image_tag('PF-logo1.png', style: "height: 50px;"), root_path %>
+            </div>
+            <% if customer_signed_in? %>
+              <p class="navbar-text navbar-right header-message">ようこそ <%= current_customer.handle_name %> さん!</p>
+            <% end %>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+
+      <footer>
+        <p class="footer_message">こちらはポートフォリオのサイトとなっております。<br>
+          ©︎iNO.inc<br>
+          製作者情報<br>
+          <%= link_to 'Created by iNO', homes_author_path, style: "color: #b7282c;" %>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

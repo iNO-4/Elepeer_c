@@ -1,0 +1,515 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* posts/new */
+
+.post_new_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+.post_new_title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.post_new_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.post_new_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.post_new_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.col-xs-5.post_new_img_box {
+    padding-left: 100px;
+}
+
+.post_new_img_button {
+	padding-top: 45px;
+	padding-left: 65px;
+}
+
+.post_new_box {
+    padding-right: 100px;
+}
+
+.post_new_item {
+	margin-bottom: 20px;
+}
+
+.post_new_item_a {
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.post_new_in_item_b {
+	padding-left: 20px;
+}
+
+.comment_area {
+	width: 430px;
+	height: 185px;
+}
+
+.title_area {
+	width: 430px;
+	height: 30px;
+}
+
+.name_area {
+	width: 430px;
+	height: 30px;
+}
+
+.post_new_rate {
+	margin-right: 10px;
+}
+
+.post_new_actions {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.comment_area::placeholder {
+	padding: 5px 0 0 5px;
+}
+
+
+/* post/show */
+
+.post_show_container {
+	padding-top: 70px;
+	margin-bottom: 85px;
+}
+
+.post_show_title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.post_show_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.post_show_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.post_show_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.user_img_tag {
+	padding-right: 50px;
+}
+
+.user_img_tag p {
+	display: inline-block;
+	padding-right: 15px;
+}
+
+.col-xs-5.post_show_img_box {
+    padding-left: 130px;
+}
+
+.col-xs-offset-1.col-xs-4.post_show_box {
+    padding-left: 60px;
+}
+
+.post_show_item {
+	margin-bottom: 25px;
+}
+
+.p_item {
+	font-size: 13px;
+	border-bottom: solid 1px #b7282c;;
+	display: inline-block;
+}
+
+.p_item_a {
+	font-size: 13px;
+	border-bottom: solid 1px #b7282c;;
+}
+
+.post_show_item_a {
+	margin-bottom: 25px;
+	display: flex;
+}
+
+.post_show_item_b {
+	margin-bottom: 30px;
+}
+
+.post_show_item_c {
+	margin-bottom: 25px;
+	display: flex;
+}
+
+.post_show_in_item_b {
+	padding-left: 40px;
+}
+
+.post_show_in_item_c {
+	padding-left: 40px;
+}
+
+.post_show_in_item_d {
+    padding-top: 2px;
+}
+
+.post_show_in_item_e {
+	padding-left: 72px;
+}
+
+.post_show_action {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+a.btn.btn-primary.btn-md {
+    margin-right: 40px;
+}
+
+.post_show_comments {
+	padding-left: 50px;
+}
+
+.comment_form {
+	margin-top: 50px;
+	padding-left: 200px;
+}
+
+.comment_area_show {
+	width: 710px;
+	height: 50px;
+	margin-right: 15px;
+}
+
+.comment_area_show::placeholder {
+	padding-left: 5px;
+}
+
+input.btn.btn-base-1.btn-md {
+	margin-bottom: 20px;
+}
+
+.comment {
+	display: flex;
+	align-items: center;
+	padding-bottom: 15px;
+}
+
+.comment_entry {
+	margin-right: 50px;
+}
+
+.comment_box {
+	display: flex;
+	align-items: center;
+	margin: 0 0 0 auto;
+}
+
+.comment_name {
+	padding-right: 10px;
+}
+
+.comment_date {
+	padding-right: 10px;
+}
+
+.comment_d_button {
+	padding-right: 50px;
+}
+
+
+/* post/index */
+
+.post_index_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+.post_index_title {
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.post_index_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.post_index_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.post_index_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.post_index_box {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post_index_item{
+	padding: 0 0 30px 25px;
+}
+
+.list_box {
+	width: 200px;
+	height: 70px;
+	background-color: #ffccf2;
+	position:relative;
+}
+
+.post_index_name {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: white;
+}
+
+.post_index_name:hover {
+	color: white;
+}
+
+.post_index_day {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: white;
+}
+
+.post_index_day:hover {
+	color: white;
+}
+
+
+
+/* post/edit */
+
+.post_edit_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+.post_edit_title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.post_edit_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.post_edit_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.post_edit_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.col-xs-5.post_edit_img_box {
+    padding-left: 100px;
+}
+
+.post_edit_img_button {
+	padding-top: 45px;
+	padding-left: 65px;
+}
+
+.post_edit_box {
+    padding-right: 100px;
+}
+
+.post_edit_item {
+	margin-bottom: 20px;
+}
+
+.post_edit_item_a {
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.post_edit_in_item_b {
+	padding-left: 20px;
+}
+
+.comment_area_edit {
+	width: 430px;
+	height: 185px;
+}
+
+.title_area_edit {
+	width: 430px;
+	height: 30px;
+}
+
+.name_area_edit {
+	width: 430px;
+	height: 30px;
+}
+
+.post_edit_rate {
+	margin-right: 10px;
+}
+
+.post_edit_actions {
+	margin-top: 50px;
+	text-align: center;
+}
+
+
+/* post/ranking */
+
+.post_ranking_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+.post_ranking_title {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.post_ranking_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.post_ranking_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.post_ranking_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.post_ranking_title_3 {
+	font-size: 13px;
+	padding-top: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.post_ranking_box {
+	text-align: center;
+	width:500px;
+	margin: 0 auto;
+}
+
+.post_ranking_box p {
+	font-size: 18px;
+	margin-top: 80px;
+}
+
+.post_ranking_item{
+	padding: 0 0 30px 0;
+	background-color: #ffccf2;
+	width: 200px;
+	height: 270px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.post_index_img_a {
+	z-index: 2;
+}
+
+.list_box_a {
+	height: 70px;
+	position:relative;
+	z-index: 1;
+}
+
+.list_box_a:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -40px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: gray;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}

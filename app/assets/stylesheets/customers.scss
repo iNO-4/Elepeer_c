@@ -1,0 +1,319 @@
+// Place all the styles related to the customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* customers/mypage */
+
+.mypage_container {
+	padding-top: 70px;
+	text-align: center;
+}
+
+.mypage_title {
+	margin-bottom: 50px;
+}
+
+.mypage_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.mypage_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.mypage_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+
+.mypage_list {
+	margin-bottom: 40px;
+}
+
+.mypage_item {
+	color: black;
+	dispray: inline-block;
+	border-bottom: solid 1px #b7282c;
+	font-size: 20px;
+}
+
+.mypage_item:hover {
+	color: gray;
+	text-decoration: none;
+}
+
+
+/* customers/show */
+
+.user_information_container {
+	padding-top: 70px;
+	margin-bottom: 90px;
+}
+
+.user_information_title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.user_information_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.user_information_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.user_information_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.user_information_item {
+	padding-left: 100px;
+}
+
+.user_information_box {
+	font-size: 15px;
+	margin-top: 40px;
+	margin-left: 60px;
+}
+
+.user_information_box table {
+	width: 140%;
+}
+
+.user_information_box td {
+	padding-top: 35px;
+	/* border-bottom: 2px solid #b7282c; */
+}
+
+.user_information_button {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.user_information_box_other {
+	font-size: 17px;
+	margin-top: 110px;
+	margin-left: 60px;
+}
+
+.user_information_box_other table {
+	width: 140%;
+}
+
+.user_information_box_other td {
+	padding-top: 45px;
+	/* border-bottom: 2px solid #b7282c; */
+}
+
+.user_information_link {
+	padding-top: 90px;
+	padding-right: 20px;
+	font-size: 15px;
+}
+
+
+/* custmers/edit */
+
+.user_edit_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+.user_edit_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.user_edit_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.user_edit_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.user_edit_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.col-xs-3.user_edit_img {
+	padding-left: 130px;
+}
+
+.user_edit_img_button {
+	padding-top: 45px;
+	padding-left: 65px;
+}
+
+.user_edit_box {
+	font-size: 16px;
+	padding-right: 125px;
+}
+
+.user_edit_item {
+	margin-top: 60px;
+}
+
+.user_edit_item span {
+	margin-right: 10px;
+}
+
+.user_edit_actions {
+	margin-top: 45px;
+	text-align: center;
+}
+
+.user_edit_actions2 {
+	text-align: center;
+	margin-top: 80px;
+}
+
+
+/* customers/unsubscribe */
+
+.user_unsubscribe_container {
+	padding-top: 150px;
+}
+
+.user_unsubscribe_title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.user_unsubscribe_title p {
+	font-size: 25px;
+}
+
+.user_unsubscribe_box {
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.user_unsubscribe_box p {
+	font-size: 15px;
+}
+
+.user_unsubscribe_item {
+	text-align: center;
+}
+
+.user_unsubscribe_button {
+	margin-right: 50px;
+	display: inline-block;
+}
+
+.user_unsubscribe_button2 {
+	margin-left: 50px;
+	display: inline-block;
+}
+
+
+/* customer/index */
+
+.user_index_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+.user_index_title {
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.user_index_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.user_index_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.user_index_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.user_index_box {
+	display: flex;
+	text-align: center;
+}
+
+.user_index_item {
+	padding: 0 50px 50px 0;
+}
+
+.user_index_name {
+	padding-top: 10px;
+}
+
+
+/* customer/thanks */
+
+.thanks {
+	text-align: center;
+	padding-top: 150px;
+	font-size: 25px;
+}
+
+.thanks_item {
+	font-size: 15px;
+	padding-top: 40px;
+}

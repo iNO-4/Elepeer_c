@@ -1,0 +1,66 @@
+<div class="container post_new_container">
+	<div class="post_new_title">
+		<p class="post_new_title_1">New Post</p>
+		<p class="post_new_title_2">新規投稿</p>
+	</div>
+
+	<%= form_for(@post) do |f| %>
+		<div class="row">
+			<div class="col-xs-5 post_new_img_box">
+				<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "pull-left post_new_img", id: 'preview', fallback: "no_image_square.jpg", size: '400x399' %>
+				<%= f.attachment_field :product_image, class: "post_new_img_button" %>
+			</div>
+
+			<div class="pull-right post_new_box">
+				<div class="post_new_item">
+					<p>タイトル</p>
+					<%= f.text_field :title, placeholder: "30文字以内", class: "title_area" %>
+				</div>
+				<div class="post_new_item">
+					<p>商品名</p>
+					<%= f.text_field :product_name, placeholder: "30文字以内", class: "name_area" %>
+				</div>
+				<div class="post_new_item_a">
+					<div class="post_new_in_item_a">
+						<p>購入日</p>
+						<%= f.text_field :bay_day, placeholder: "半角英数8字", class: "bay_area"%>
+					</div>
+					<div class="post_new_in_item_b">
+						<p>購入時価格</p>
+						<%= f.text_field :price, placeholder: "半角英数字", class: "price_area"%>
+					</div>
+				</div>
+				<div class="post_new_item">
+					<p>コメント</p>
+					<%= f.text_area :body, placeholder: "250文字以内", class: "comment_area" %>
+				</div>
+				<div class="post_new_item" id="star">
+					<%= f.label :rate,'評価', class: "post_new_rate" %>
+					<%= f.hidden_field :rate, id: :review_star %>
+				</div>
+			</div>
+		</div>
+		<div class="post_new_actions">
+			<%= f.submit '投稿する', class: "btn btn-success btn-md" %>
+		</div>
+	<% end %>
+</div>
+
+<script>
+	$('#star').raty({
+	    size     : 36,
+	    starOff:  '<%= asset_path('star-off.png') %>',
+	    starOn : '<%= asset_path('star-on.png') %>',
+	    starHalf: '<%= asset_path('star-half.png') %>',
+	    scoreName: 'post[rate]',
+	    half: true,
+	});
+
+	$('#post_product_image').on('change', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $("#preview").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+});
+</script>

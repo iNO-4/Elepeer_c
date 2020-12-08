@@ -1,0 +1,32 @@
+<div class="container bookmark_container">
+	<div class="bookmark_title">
+		<p class="bookmark_title_1">Favorites List</p>
+		<p class="bookmark_title_2">お気に入りリスト</p>
+	</div>
+
+	<div class="bookmark_box">
+		<table>
+			<tr>
+				<th></th><th>タイトル</th><th></th><th>ユーザネーム</th><th></th>
+			</tr>
+			<% @bookmarks.each do |bookmark| %>
+				<tr>
+					<td>
+						<%= attachment_image_tag bookmark.post, :product_image, :fill, 100, 100, class: "bookmark_img_1", fallback: "no_image_square.jpg", size: '100x100' %>
+					</td>
+					<td>
+						<%= bookmark.post.title %>
+					</td>
+					<td>
+						<%= attachment_image_tag current_customer, :profile_image, :fill, 100, 100, class: "img-circle bookmark_img_2", fallback: "no_image_square.jpg", size: '100x100' %>
+					</td>
+					<td>
+						<%= bookmark.post.customer.handle_name %>
+					</td>
+					<td>
+						<%= link_to "リストから外す", bookmark_path(bookmark), method: :delete, class: "btn btn-danger btn-lg" %>
+					</td>
+			<% end %>
+		</table>
+	</div>
+</div>

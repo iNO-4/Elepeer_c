@@ -1,0 +1,137 @@
+<div class="container post_show_container">
+	<div class="row">
+		<div class="post_show_title">
+			<p class="post_show_title_1">Post Details</p>
+			<p class="post_show_title_2">投稿詳細</p>
+		</div>
+
+		<div class="col-xs-12 post_show_user_box">
+			<%= link_to customer_path(@customer) do %>
+				<div class="pull-right user_img_tag">
+					<p><%= @customer.handle_name %></p>
+					<%= attachment_image_tag @customer, :profile_image, :fill, 80, 80, class: "img-circle user_image_show", fallback: "no_image_square.jpg", size: '80x80' %>
+				</div>
+			<% end %>
+		</div>
+
+		<div class="col-xs-5 post_show_img_box">
+			<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "post_show_img", fallback: "no_image_square.jpg", size: '400x399' %>
+		</div>
+
+		<div class="col-xs-offset-1 col-xs-6 post_show_box">
+			<div class="post_show_item">
+				<p class="p_item">タイトル:</p>
+				<p><%= @post.title %></p>
+			</div>
+			<div class="post_show_item">
+				<p class="p_item">商品名:</p>
+				<p><%= @post.product_name %></p>
+			</div>
+			<div class="post_show_item_a">
+				<div class="post_show_in_item_a">
+					<p class="p_item">購入日:</p>
+					<p><%= @post.bay_day %></p>
+				</div>
+				<div class="post_show_in_item_b">
+					<p class="p_item">購入時価格:</p>
+					<p>¥<%= @post.price.to_s(:delimited) %></p>
+				</div>
+				<div class="post_show_in_item_c">
+					<p class="p_item">投稿日:</p>
+					<p><%= l @post.created_at, format: :short %></p>
+				</div>
+			</div>
+			<div class="post_show_item_b">
+				<p class="p_item">コメント:</p>
+				<p><%= @post.body %></p>
+			</div>
+
+			<div class="post_show_item_c">
+				<div class="post_show_in_item_d">
+					<p class="p_item_a">いいね</p>
+					<% if @post.favorited_by?(current_customer) %>
+					  <td>
+					  	<%= link_to post_favorites_path(@post), method: :delete do %>
+					  	  <span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span>
+					  	  <%= @post.favorites.count %>
+					  	<% end %>
+					  </td>
+					<% else %>
+					  <td>
+					  	<%= link_to post_favorites_path(@post), method: :post do %>
+					  	  <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" ></span>
+					  	  <%= @post.favorites.count %>
+					  	<% end %>
+					  </td>
+					<% end %>
+				</div>
+				<div class="post_show_in_item_e">
+					<p class="p_item">評価</p>
+					<div id="star-rate"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<% if @post.customer == current_customer %>
+		<div class="post_show_action">
+			<%= link_to '編集する', edit_post_path(@post), class: "btn btn-primary btn-md" %>
+			<%= link_to "削除する", post_path(@post), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn btn-danger btn-md destroy_post_#{@post.id}" %>
+		</div>
+	<% else %>
+		<div class="post_show_action">
+			<%= link_to 'お気に入りへ追加', bookmarks_path(post_id: @post.id), method: :post, class: "btn btn-primary btn-md" %>
+		</div>
+	<% end %>
+
+	<div class="row post_show_comments">
+		<p>コメント一覧</p>
+		<ul class="container">
+			<% @post.post_comments.each do |post_comment| %>
+				<li>
+					<div class="comment">
+						<div class="comment_entry">
+							<%= post_comment.comment %>
+						</div>
+						<div class="comment_box">
+							<div class="comment_name">
+								- <%= post_comment.customer.handle_name %> -
+							</div>
+							<div class="comment_date">
+								<%= post_comment.created_at.strftime('%Y/%m/%d') %>
+							</div>
+							<% if post_comment.customer == current_customer %>
+								<div class="comment_d_button">
+									<%= link_to "コメントを削除する", post_post_comment_path(post_comment.post, post_comment), method: :delete, class: "btn btn-danger btn-sm" %>
+								</div>
+							<% end %>
+						</div>
+					</div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
+	<%= form_for [@post, @post_comment] do |f| %>
+		<div class="row comment_form">
+			<div class="col-xs-12">
+				<p>コメント投稿</p>
+				<%= f.text_area :comment, class: "comment_area_show", placeholder: "50文字以内" %>
+				<%= f.submit "コメントする", class: "btn btn-base-1 btn-md" %>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<script>
+	$('#star-rate').raty({
+	    size     : 36,
+	    starOff:  '<%= asset_path('star-off.png') %>',
+	    starOn : '<%= asset_path('star-on.png') %>',
+	    starHalf: '<%= asset_path('star-half.png') %>',
+	    scoreName: 'post[rate]',
+	    half: true,
+	    readOnly: true,
+	    score: <%= @post.rate %>,
+	});
+</script>

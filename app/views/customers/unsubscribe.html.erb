@@ -1,0 +1,18 @@
+<div class="container user_unsubscribe_container">
+	<div class="user_unsubscribe_title">
+		<p>本当に退会しますか？</p>
+	</div>
+
+	<div class="user_unsubscribe_box">
+		<p>はいを選択されますと、登録情報・投稿・コメント等全ての情報が失われます。</p>
+	</div>
+
+	<div class="user_unsubscribe_item">
+		<div class="user_unsubscribe_button">
+			<%= link_to 'はい', unsubscribe_customer_path(@customer), method: :patch, data: {confirm: "退会されますと、登録情報・投稿・コメント等全ての情報が失われます。本当に退会されますか？"}, class: "btn btn-danger btn-lg" %>
+		</div>
+		<div class="user_unsubscribe_button2">
+			<%= link_to '退会しない', edit_customer_path, class: "btn btn-primary btn-lg" %>
+		</div>
+	</div>
+</div>

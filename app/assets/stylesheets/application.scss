@@ -1,0 +1,281 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets"; /*追加分*/
+@import "bootstrap"; /*追加分*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #fff2f0;
+    padding-top: 70px;
+    font-family: 'Noto Sans JP', 'Noto Serif JP',sans-serif;
+}
+
+.navbar-default {
+	background-color: white;
+}
+
+.header-container {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.logo {
+	margin-left: 47%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.drawer-menu-item {
+	font-size: 2rem;
+	margin-bottom: 15px;
+	padding-left: 15px;
+}
+
+.item {
+	color: #b7282c;
+}
+
+.item:hover {
+	color: #b7282c;
+}
+
+.drawer-nav {
+	height: 100%;
+	padding-top: 70px;
+	background-color: white;
+}
+
+.drawer-hamburger {
+	width: 3rem;
+	padding-left: 5%;
+	padding-top: 23px;
+}
+
+.header-message {
+	margin-left: 30%;
+	margin-top: 2%;
+}
+
+.drawer-hamburger-icon{
+	background-color: #b7282c;
+}
+
+/* フッターを下に固定するもの */
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+footer {
+	background-color: white;
+	height: 95px;
+	margin-top: auto;
+}
+
+.footer_message {
+    text-align: center;
+    font-size: 5px;
+    padding-top: 25px;
+}
+
+
+/* devise/registrations */
+
+.sign_up_container {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.sign_up_title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.sign_up_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.sign_up_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.sign_up_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.sign_up_box {
+	width: 500px;
+	height: 625px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.sign_up_box_1 {
+	padding-top: 25px;
+}
+
+.sign_up_box_message {
+	background-color: #ffccf2;
+	width: 500px;
+	height: 50px;
+	text-align: center;
+}
+
+.sign_up_box_message p {
+	font-size: 17px;
+	padding-top: 13px;
+	color: white;
+}
+
+.sign_up_field {
+	padding-left: 85px;
+	margin-bottom: 20px;
+}
+
+.sign_up_actions {
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+.sign_up_box_1 p {
+	text-align: center;
+}
+
+.sign_up_text {
+	width: 303px;
+	height: 24px;
+}
+
+.sign_up_line {
+	border-top: solid 1px gray;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+/* devise/sessions */
+
+.sign_in_container {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.sign_in_title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.sign_in_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.sign_in_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.sign_in_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.sign_in_box {
+	width: 430px;
+	height: 417px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.sign_in_box_message {
+	background-color: #ffccf2;
+	width: 430px;
+	height: 50px;
+	text-align: center;
+}
+
+.sign_in_box_message p {
+	font-size: 17px;
+	padding-top: 13px;
+	color: white;
+}
+
+.sign_in_box_1 {
+	padding-top: 25px;
+}
+
+.sign_in_field {
+	margin-bottom: 20px;
+	padding-left: 85px;
+}
+
+.sign_in_actions {
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+.sign_in_box_1 p {
+	padding-left: 20px;
+}
+
+.sign_in_text {
+	width: 250px;
+	height: 24px;
+}
+
+.sign_in_line {
+	border-top: solid 1px gray;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}

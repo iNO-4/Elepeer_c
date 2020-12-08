@@ -1,0 +1,21 @@
+<div class="container user_index_container">
+	<div class="user_index_title">
+		<p class="user_index_title_1">User List</p>
+		<p class="user_index_title_2">ユーザ一覧</p>
+	</div>
+
+	<div class="user_index_box">
+		<% @customers.each do |customer| %>
+			<%= link_to customer_path(customer) do %>
+				<div class="user_index_item">
+					<div class="user_index_img">
+						<%= attachment_image_tag customer, :profile_image, :fill,150, 150, class: "img-circle", fallback: "no_image_square.jpg", size: '150x150' %>
+					</div>
+					<div class="user_index_name">
+						<%= customer.handle_name %>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>

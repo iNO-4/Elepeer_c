@@ -1,0 +1,60 @@
+<div class="container sign_up_container">
+  <div class="sign_up_title">
+    <p class="sign_up_title_1">Sign Up</p>
+    <p class="sign_up_title_2">新規登録画面</p>
+  </div>
+
+  <div class="sign_up_box">
+    <div class="sign_up_box_message">
+        <p>全て入力して下さい</p>
+    </div>
+    <div class="sign_up_box_1">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="sign_up_field">
+          <%= f.label :名前 %><br>
+          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" ,placeholder: "姓" %>
+          <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name",placeholder: "名" %>
+        </div>
+
+        <div class="sign_up_field">
+          <%= f.label :フリガナ %><br>
+          <%= f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana",placeholder: "セイ" %>
+          <%= f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana",placeholder: "メイ" %>
+        </div>
+
+        <div class="sign_up_field">
+          <%= f.label :ハンドルネーム（表示名）%><br>
+          <%= f.text_field :handle_name, autofocus: true, autocomplete: "handle_name", class: "sign_up_text" %>
+        </div>
+
+        <div class="sign_up_field">
+          <%= f.label :メールアドレス %><br>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "sign_up_text" %>
+        </div>
+
+        <div class="sign_up_field">
+          <%= f.label :パスワード（６文字以上） %><br>
+          <!--<% if @minimum_password_length %>
+            (<%= @minimum_password_length %>文字以上)
+          <% end %>-->
+          <%= f.password_field :password, autocomplete: "new-password", class: "sign_up_text" %>
+        </div>
+
+        <div class="sign_up_field">
+          <%= f.label :パスワード（確認用） %><br>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "sign_up_text" %>
+        </div>
+
+        <div class="sign_up_actions">
+          <%= f.submit '新規登録', class: "btn btn-primary btn-md" %>
+        </div>
+      <% end %>
+
+      <div class="sign_up_line"></div>
+
+      <p>ログインはこちらから>>> <%= render "devise/shared/links" %></p>
+    </div>
+  </div>
+</div>

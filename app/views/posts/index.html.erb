@@ -1,0 +1,26 @@
+<div class="container post_index_container">
+	<div class="post_index_title">
+    <p class="post_index_title_1">Posts List</p>
+    <p class="post_index_title_2">投稿一覧</p>
+  </div>
+
+	<div class="post_index_box">
+		<% @posts.each do |post| %>
+    		<%= link_to post_path(post) do %>
+      			<div class="post_index_item">
+        			<div class="index_img">
+          				<%= attachment_image_tag post, :product_image, :fill, 200, 200, class: "post_index_img", fallback: "no_image_square.jpg", size: '200x200' %>
+       				</div>
+        			<div class="list_box">
+          				<div class="post_index_name">
+            				<%= post.title %>
+         				</div>
+          				<div class="post_index_day">
+          					<%= l post.created_at, format: :short %>
+          				</div>
+        			</div>
+      			</div>
+    		<% end %>
+  		<% end %>
+	</div>
+</div>

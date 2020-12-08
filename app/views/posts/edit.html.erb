@@ -1,0 +1,59 @@
+<div class="container post_edit_container">
+	<div class="post_edit_title">
+		<p class="post_edit_title_1">Post Edit</p>
+		<p class="post_edit_title_2">投稿編集</p>
+	</div>
+
+	<%= form_for(@post) do |f| %>
+		<div class="row">
+			<div class="col-xs-5 post_edit_img_box">
+				<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "pull-left post_edit_img", fallback: "no_image_square.jpg", size: '400x399' %>
+				<%= f.attachment_field :product_image, class: "post_edit_img_button" %>
+			</div>
+
+			<div class="pull-right post_edit_box">
+				<div class="post_edit_item">
+					<p>タイトル</p>
+					<%= f.text_field :title, autofocus: true, autocomplete: "title", class: "title_area_edit" %>
+				</div>
+				<div class="post_edit_item">
+					<p>商品名</p>
+					<%= f.text_field :product_name, autofocus: true, autocomplete: "product_name", class: "name_area_edit" %>
+				</div>
+				<div class="post_edit_item_a">
+					<div class="post_edit_in_item_a">
+						<p>購入日</p>
+						<%= f.text_field :bay_day, autofocus: true, autocomplete: "bay_day", class: "bay_area_edit" %>
+					</div>
+					<div class="post_edit_in_item_b">
+						<p>購入時価格</p>
+						<%= f.text_field :price, autofocus: true, autocomplete: "price", class: "price_area_edit" %>
+					</div>
+				</div>
+				<div class="post_edit_item">
+					<p>コメント</p>
+					<%= f.text_area :body, autofocus: true, autocomplete: "body", class: "comment_area_edit" %>
+				</div>
+				<div class="post_edit_item" id="star">
+					<%= f.label :rate,'評価', class: "post_edit_rate" %>
+					<%= f.hidden_field :rate, id: :review_star %>
+				</div>
+			</div>
+		</div>
+		<div class="post_edit_actions">
+          <%= f.submit "更新する", class: "btn btn-success btn-md" %>
+        </div>
+    <% end %>
+</div>
+
+<script>
+	$('#star').raty({
+	    size     : 36,
+	    starOff:  '<%= asset_path('star-off.png') %>',
+	    starOn : '<%= asset_path('star-on.png') %>',
+	    starHalf: '<%= asset_path('star-half.png') %>',
+	    scoreName: 'post[rate]',
+	    half: true,
+	    score: <%= @post.rate %>,
+	});
+</script>

@@ -1,0 +1,46 @@
+<div class="container user_edit_container">
+	<div class="user_edit_title">
+		<p class="user_edit_title_1">User Edit</p>
+		<p class="user_edit_title_2">ユーザ情報編集</p>
+	</div>
+
+	<div class="row">
+		<%= form_for(@customer) do |f| %>
+			<div class="col-xs-3 user_edit_img">
+				<%= attachment_image_tag @customer, :profile_image, :fill, 350, 350, class: "img-circle pull-left user_image_edit", fallback: "no_image_square.jpg" %>
+				<%= f.attachment_field :profile_image, class: "user_edit_img_button" %>
+			</div>
+
+			<div class="pull-right user_edit_box">
+				<div class="user_edit_item">
+					<span>氏名</span>
+					<%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+					<%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+				</div>
+				<div class="user_edit_item">
+					<span>カナ</span>
+					<%= f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana" %>
+					<%= f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana" %>
+				</div>
+				<div class="user_edit_item">
+					<span>表示名</span>
+					<%= f.text_field :handle_name, autofocus: true, autocomplete: "handle_name" %>
+				</div>
+				<div class="user_edit_item">
+					<span>メールアドレス</span>
+					<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+				</div>
+
+				<div class="user_edit_actions">
+		          <%= f.submit "更新する", class: "btn btn-success btn-md" %>
+		        </div>
+		    </div>
+	    <% end %>
+	</div>
+
+	<div class="user_edit_actions2">
+      <% if customer_signed_in? && @customer.id == current_customer.id %>
+        <%= link_to '退会する', unsubscribe_customer_path(@customer), class: "btn btn-danger btn-md" %>
+      <% end %>
+	</div>
+</div>
