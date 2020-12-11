@@ -1,5 +1,12 @@
 ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M:%S"
-      short: "%Y/%m/%d %H:%M"
+  activerecord:
+    attributes:
+      customer:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+        time:
+          formats:
+            default: "%Y/%m/%d %H:%M:%S"
+            short: "%Y/%m/%d %H:%M"
