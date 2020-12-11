@@ -74,8 +74,15 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
-#デプロイ
+# デプロイ
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
 end
+
+# エラー日本語化
+gem 'rails-i18n'
+
+# devise日本語化
+gem 'devise-i18n'
+gem 'devise-i18n-views'
