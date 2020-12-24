@@ -282,6 +282,7 @@ footer {
 
 
 
+/* 追加分 */
 
 .sign_up_error_box {
 	text-align: center;
@@ -290,4 +291,14 @@ footer {
 
 .sign_up_login {
 	padding-bottom: 15px;
+}
+
+.field_with_errors {
+	display: contents;
+}
+
+/* インプットにフォーカスされたらプレースホルダを非表示させる */
+input:focus::placeholder {
+	color: transparent;
+	transition: .2s; /* プレースホルダが非表示になるときにふわっと消えるようにするため */
 }
