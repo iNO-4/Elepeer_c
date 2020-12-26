@@ -16,25 +16,31 @@
         </div>
 
         <div class="sign_up_field">
-          <%= f.label :名前, class: "sign_up_label"%><br>
-          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" ,placeholder: "姓", class: "sign_up_form" %>
-          <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name",placeholder: "名", class: "sign_up_form" %>
+          <%= f.label :名前%><br>
+          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" ,placeholder: "姓" %>
+          <span class="tooltipMsg">必ず入力してください</span>
+          <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name",placeholder: "名" %>
+          <span class="tooltipMsg">必ず入力してください</span>
         </div>
 
         <div class="sign_up_field">
           <%= f.label :フリガナ %><br>
           <%= f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana",placeholder: "セイ" %>
+          <span class="tooltipMsg">必ず入力してください</span>
           <%= f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana",placeholder: "メイ" %>
+          <span class="tooltipMsg">必ず入力してください</span>
         </div>
 
         <div class="sign_up_field">
           <%= f.label :ハンドルネーム（表示名）%><br>
-          <%= f.text_field :handle_name, autofocus: true, autocomplete: "handle_name", class: "sign_up_text" %>
+          <%= f.text_field :handle_name, autofocus: true, autocomplete: "handle_name", class: "sign_up_form" %>
+          <span class="tooltipMsg">後から登録可能です</span>
         </div>
 
         <div class="sign_up_field">
           <%= f.label :メールアドレス %><br>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "sign_up_text" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "sign_up_form" %>
+          <span class="tooltipMsg">必ず入力してください</span>
         </div>
 
         <div class="sign_up_field">
@@ -42,12 +48,14 @@
           <!--<% if @minimum_password_length %>
             (<%= @minimum_password_length %>文字以上)
           <% end %>-->
-          <%= f.password_field :password, autocomplete: "new-password", class: "sign_up_text" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "sign_up_form" %>
+          <span class="tooltipMsg">必ず入力してください</span>
         </div>
 
         <div class="sign_up_field">
           <%= f.label :パスワード（確認用） %><br>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "sign_up_text" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "sign_up_form" %>
+          <span class="tooltipMsg">必ず入力してください</span>
         </div>
 
         <div class="sign_up_actions">

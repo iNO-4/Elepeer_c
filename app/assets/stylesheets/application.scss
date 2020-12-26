@@ -165,6 +165,7 @@ footer {
 .sign_up_field {
 	padding-left: 85px;
 	margin-bottom: 20px;
+	position: relative; /*tooltip追加分*/
 }
 
 .sign_up_actions {
@@ -177,7 +178,7 @@ footer {
 	text-align: center;
 }
 
-.sign_up_text {
+.sign_up_form {
 	width: 303px;
 	height: 24px;
 }
@@ -301,4 +302,36 @@ footer {
 input:focus::placeholder {
 	color: transparent;
 	transition: .2s; /* プレースホルダが非表示になるときにふわっと消えるようにするため */
+}
+
+/* ツールチップデザイン */
+.tooltipMsg {
+	position: relative;
+	display: inline-block;
+	margin: 1.2em 0;
+	padding: 0px 10px;
+	min-width: 120px;
+	max-width: 100%;
+	color: white;
+	font-size: 12px;
+	background: rgb(120, 120 ,120);
+	border-radius: 5px;
+	box-shadow: 0px 1px 2px 0 rgb(120, 120, 120);
+	z-index: 10000;
+	display: none;
+}
+
+.tooltipMsg:before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -15px;
+	border: 8px solid transparent;
+	border-top: 8px solid rgb(120, 120, 120);
+}
+
+.sign_up_field span.tooltipMsg {
+	position: absolute;
+	bottom: 75%;
 }
