@@ -17,7 +17,7 @@
 
         <div class="sign_up_field">
           <%= f.label :名前%><br>
-          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" ,placeholder: "姓" %>
+          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" ,placeholder: "姓", class: "is-invalid" %>
           <span class="tooltipMsg">必ず入力してください</span>
           <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name",placeholder: "名" %>
           <span class="tooltipMsg">必ず入力してください</span>
