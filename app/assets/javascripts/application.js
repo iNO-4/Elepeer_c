@@ -18,6 +18,7 @@
 //= require iscroll.js
 //= require drawer.js
 //= require jquery.raty.js
+//= require jquery.validate.min.js
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {

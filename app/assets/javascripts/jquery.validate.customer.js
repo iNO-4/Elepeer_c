@@ -53,31 +53,28 @@
 //   });
 // });
 
-$(function(){
+$(function () {
   //フォーム指定
-  $('sign_up_field').validate({
+  $("#sign_up_field").validate({
 
     //検証ルール設定
     rules: {
       //ここに検証ルールを設定
-      "new_customer[last_name]": {
+      "customer[last_name]": {
         required: true
-      }
+      },
     },
 
     //エラーメッセージ設定
     messages: {
       //ここにエラーメッセージを設定
-      last_name: {
-        required: '入力必須です'
-      }
+      "customer[last_name]": {
+        required: "入力必須です"
+      },
     },
-
-    //エラーメッセージ出力箇所設定
-    errorPlacement: function(error, element){
-      //ここにエラーメッセージの出力箇所を設定
-      error.insertAfter(element);
-    },
-    debug: true
+  });
+  //エラーメッセージ出力箇所設定
+  $("#last_name").blur(function () {
+    $(this).valid();
   });
 });
