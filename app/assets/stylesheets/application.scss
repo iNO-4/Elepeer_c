@@ -294,6 +294,7 @@ footer {
 	padding-bottom: 15px;
 }
 
+/* エラーが起きても、フォームが崩れない */
 .field_with_errors {
 	display: contents;
 }
