@@ -140,7 +140,7 @@ footer {
 
 .sign_up_box {
 	width: 500px;
-	/*height: 625px;*/
+	max-width: 100%;
 	margin: 0 auto;
 	background-color: white;
 }
@@ -151,7 +151,6 @@ footer {
 
 .sign_up_box_message {
 	background-color: #ffccf2;
-	width: 500px;
 	height: 50px;
 	text-align: center;
 }
@@ -180,6 +179,7 @@ footer {
 
 .sign_up_form {
 	width: 303px;
+	max-width: 66%;
 	height: 24px;
 }
 
@@ -343,7 +343,13 @@ input:focus::placeholder {
 	.navbar-default {
 	width: 100%;
 	}
-	.top_image3 {
+	.row1 {
 	width: 100%;
+	}
+	.row2 {
+	width: 100%;
+	}
+	.top_text2 {
+	float: none;
 	}
 }
