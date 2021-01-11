@@ -162,7 +162,7 @@ footer {
 }
 
 .sign_up_field {
-	margin-left: 15%;
+	/* margin-left: 15%; */
 	margin-bottom: 20px;
 	position: relative; /*tooltip追加分*/
 }
@@ -260,7 +260,7 @@ footer {
 
 .sign_in_field {
 	margin-bottom: 20px;
-	/* padding-left: 85px; */
+	text-align: center;
 }
 
 .sign_in_actions {
@@ -356,7 +356,13 @@ input:focus::placeholder {
 	.top_text2 {
 	float: none;
 	}
-	.sign_in_field {
+	.sign_up_field {
 	text-align: center;
+	}
+}
+
+@media screen and (min-width : 481px){
+	.sign_up_field {
+	margin-left: 15%;
 	}
 }
