@@ -74,20 +74,32 @@
 }
 
 .row1 {
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
+	width: 100%;
+	border: 1px solid gray;
 }
 
 .row2 {
 	margin-bottom: 20px;
+	width: 100%;
+}
+
+.top_image2 {
+	display: table;
+}
+
+.top_image3 {
+	display: table;
 }
 
 .top_text2 {
-	padding-top: 110px;
+	margin-left: 15%;
 	font-size: 18px;
+	display: inline-table;
 }
 
 .top_text3 {
-	margin-top: 110px;
+	margin-right: 15%;
     font-size: 18px;
 }
 
