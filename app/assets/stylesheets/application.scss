@@ -348,10 +348,17 @@ input:focus::placeholder {
 	width: 100%;
 	}
 	.row1 {
-	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 30px;
 	}
 	.row2 {
-	width: 100%;
+	margin: 0 auto;
+	}
+	.about_message1 {
+	margin-left: 28%;
+	}
+	.about_message2 p {
+	font-size: 11px;
 	}
 	.top_text2 {
 	float: none;
