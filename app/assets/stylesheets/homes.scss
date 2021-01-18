@@ -34,6 +34,10 @@
     top: 35%;
 }
 
+.top_image_logo {
+	width: 50%;
+}
+
 .top_text {
     color: white;
     font-size: 80px;
@@ -46,6 +50,16 @@
 	display: flex;
 	margin-left: 42%;
 	margin-bottom: 40px;
+}
+
+.about_message1_a {
+	color: #b7282c;
+	font-size: 36px;
+}
+
+.about_message1_b {
+	padding-top: 2%;
+	font-size: 22px;
 }
 
 .about_message2 {
