@@ -5,13 +5,13 @@
 	</div>
 
 	<%= form_for(@post) do |f| %>
-		<div class="row">
-			<div class="col-xs-5 post_new_img_box">
-				<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "pull-left post_new_img", id: 'preview', fallback: "no_image_square.jpg", size: '400x399' %>
+		<div class="row post_new_box">
+			<div class="post_new_img_box">
+				<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "post_new_img", id: 'preview', fallback: "no_image_square.jpg" %>
 				<%= f.attachment_field :product_image, class: "post_new_img_button" %>
 			</div>
 
-			<div class="pull-right post_new_box">
+			<div class="post_new_form">
 				<div class="post_new_item">
 					<p>タイトル</p>
 					<%= f.text_field :title, placeholder: "30文字以内", class: "title_area" %>
