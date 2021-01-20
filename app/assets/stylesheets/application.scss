@@ -403,6 +403,20 @@ input:focus::placeholder {
 	.sign_up_field {
 	text-align: center;
 	}
+
+	.post_new_box {
+	display: table;
+	margin: 0 auto;
+	}
+	.post_new_img_box {
+	float: none;
+	max-width: 95%;
+	margin: 0 auto;
+	}
+	.post_new_form {
+	float: none;
+	max-width: 95%;
+	}
 }
 
 @media screen and (min-width : 481px){

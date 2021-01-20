@@ -41,8 +41,17 @@
 	font-size: 25px;
 }
 
-.col-xs-5.post_new_img_box {
-    padding-left: 100px;
+.post_new_box {
+	width: 100%;
+}
+
+.post_new_img_box {
+    margin-left: 14%;
+    float: left;
+}
+
+.post_new_img {
+	width: 400px;
 }
 
 .post_new_img_button {
@@ -50,8 +59,9 @@
 	padding-left: 65px;
 }
 
-.post_new_box {
-    padding-right: 100px;
+.post_new_form {
+    margin-right: 9%;
+    float: right;
 }
 
 .post_new_item {
