@@ -404,19 +404,30 @@ input:focus::placeholder {
 	text-align: center;
 	}
 
+	/*
 	.post_new_box {
 	display: table;
 	margin: 0 auto;
 	}
 	.post_new_img_box {
 	float: none;
-	max-width: 95%;
 	margin: 0 auto;
+	}
+	.post_new_img {
+	width: 100%;
 	}
 	.post_new_form {
 	float: none;
-	max-width: 95%;
 	}
+	.title_area {
+	width: 90%;
+	}
+	.name_area {
+	width: 90%;
+	}
+	.comment_area {
+	width: 90%;
+	} */
 }
 
 @media screen and (min-width : 481px){
