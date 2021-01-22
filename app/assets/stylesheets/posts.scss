@@ -97,8 +97,8 @@
 }
 
 .post_new_actions {
-	margin-top: 50px;
-	text-align: center;
+	margin-top: 60px;
+	float: right;
 }
 
 .comment_area::placeholder {
@@ -522,4 +522,39 @@ input.btn.btn-base-1.btn-md {
   transform: translateX(-50%);/*位置調整*/
   background-color: gray;/*線の色*/
   border-radius: 2px;/*線の丸み*/
+}
+
+
+
+/* レスポンシブ メディアクエリ */
+@media screen and (max-width : 480px) {
+
+	.post_new_box {
+	display: table;
+	margin: 0 auto;
+	}
+	.post_new_img_box {
+	float: none;
+	margin: 0 auto;
+	}
+	.post_new_img {
+	width: 100%;
+	}
+	.post_new_form {
+	float: none;
+	margin: 0 auto;
+	}
+	.title_area {
+	width: 90%;
+	}
+	.name_area {
+	width: 90%;
+	}
+	.comment_area {
+	width: 90%;
+	}
+	.post_new_actions {
+	float: none;
+	text-align: center;
+	}
 }
