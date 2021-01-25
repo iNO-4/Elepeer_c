@@ -384,8 +384,17 @@ input.btn.btn-base-1.btn-md {
 	font-size: 25px;
 }
 
-.col-xs-5.post_edit_img_box {
-    padding-left: 100px;
+.post_edit_box {
+    width: 100%;
+}
+
+.post_edit_img_box {
+    padding-left: 14%;
+    float: left;
+}
+
+.post_edit_img {
+	width: 400px;
 }
 
 .post_edit_img_button {
@@ -393,8 +402,9 @@ input.btn.btn-base-1.btn-md {
 	padding-left: 65px;
 }
 
-.post_edit_box {
-    padding-right: 100px;
+.post_edit_form {
+	margin-right: 9%;
+	float: right;
 }
 
 .post_edit_item {
@@ -430,8 +440,8 @@ input.btn.btn-base-1.btn-md {
 }
 
 .post_edit_actions {
-	margin-top: 50px;
-	text-align: center;
+	margin-top: 60px;
+	float: right;
 }
 
 
@@ -554,6 +564,35 @@ input.btn.btn-base-1.btn-md {
 	width: 90%;
 	}
 	.post_new_actions {
+	float: none;
+	text-align: center;
+	}
+
+	.post_edit_box {
+	display: table;
+	margin: 0 auto;
+	}
+	.post_edit_img_box {
+	float: none;
+	margin: 0 auto;
+	}
+	.post_edit_img {
+	width: 100%;
+	}
+	.post_edit_form {
+	float: none;
+	margin: 0 auto
+	}
+	.title_area_edit {
+	width: 90%;
+	}
+	.name_area_edit {
+	width: 90%;
+	}
+	.comment_area_edit {
+	width: 90%;
+	}
+	.post_edit_actions {
 	float: none;
 	text-align: center;
 	}
