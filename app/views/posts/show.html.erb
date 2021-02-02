@@ -1,24 +1,24 @@
 <div class="container post_show_container">
-	<div class="row">
-		<div class="post_show_title">
-			<p class="post_show_title_1">Post Details</p>
-			<p class="post_show_title_2">投稿詳細</p>
+	<div class="post_show_title">
+		<p class="post_show_title_1">Post Details</p>
+		<p class="post_show_title_2">投稿詳細</p>
+	</div>
+
+	<div class="post_show_user_box">
+		<%= link_to customer_path(@customer) do %>
+			<div class="pull-right user_img_tag">
+				<p><%= @customer.handle_name %></p>
+				<%= attachment_image_tag @customer, :profile_image, :fill, 80, 80, class: "img-circle user_image_show", fallback: "no_image_square.jpg", size: '80x80' %>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="post_show_box">
+		<div class="post_show_img_box">
+			<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "post_show_img", fallback: "no_image_square.jpg" %>
 		</div>
 
-		<div class="col-xs-12 post_show_user_box">
-			<%= link_to customer_path(@customer) do %>
-				<div class="pull-right user_img_tag">
-					<p><%= @customer.handle_name %></p>
-					<%= attachment_image_tag @customer, :profile_image, :fill, 80, 80, class: "img-circle user_image_show", fallback: "no_image_square.jpg", size: '80x80' %>
-				</div>
-			<% end %>
-		</div>
-
-		<div class="col-xs-5 post_show_img_box">
-			<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "post_show_img", fallback: "no_image_square.jpg", size: '400x399' %>
-		</div>
-
-		<div class="col-xs-offset-1 col-xs-6 post_show_box">
+		<div class="post_show_form">
 			<div class="post_show_item">
 				<p class="p_item">タイトル:</p>
 				<p><%= @post.title %></p>
@@ -84,7 +84,7 @@
 		</div>
 	<% end %>
 
-	<div class="row post_show_comments">
+	<div class="post_show_comments">
 		<p>コメント一覧</p>
 		<ul class="container">
 			<% @post.post_comments.each do |post_comment| %>
@@ -113,8 +113,8 @@
 	</div>
 
 	<%= form_for [@post, @post_comment] do |f| %>
-		<div class="row comment_form">
-			<div class="col-xs-12">
+		<div class="comment_form">
+			<div class="post_comment_box">
 				<p>コメント投稿</p>
 				<%= f.text_area :comment, class: "comment_area_show", placeholder: "50文字以内" %>
 				<%= f.submit "コメントする", class: "btn btn-base-1 btn-md" %>
