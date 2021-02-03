@@ -144,8 +144,13 @@
 	font-size: 25px;
 }
 
-.user_img_tag {
-	padding-right: 50px;
+.post_show_user_box {
+	float: right;
+}
+
+.user_img_show {
+	width: 80px;
+	height: 80px;
 }
 
 .user_img_tag p {
@@ -217,7 +222,7 @@
 }
 
 .post_show_action {
-	text-align: center;
+	float: right;
 	margin-top: 80px;
 	margin-bottom: 80px;
 }
